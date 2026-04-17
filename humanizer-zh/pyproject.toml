@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "batch-edit-agent"
+version = "0.1.0"
+description = "Safety-first batch text replacement workflow with two-stage review."
+readme = "README_GITHUB.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "NIRVANA" }
+]
+keywords = ["batch edit", "safe replacement", "text workflow", "audit"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Software Development :: Libraries"
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/your-org-or-user/batch-edit-agent"
+Repository = "https://github.com/your-org-or-user/batch-edit-agent"
+Issues = "https://github.com/your-org-or-user/batch-edit-agent/issues"
+
+[project.scripts]
+batch-edit-agent = "batch_edit_agent.cli:main"
+
+[tool.setuptools]
+packages = ["batch_edit_agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
